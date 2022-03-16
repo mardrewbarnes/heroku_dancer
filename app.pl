@@ -3,6 +3,7 @@ use Dancer;
 
 use lib '.';
 
+use JSON::PP;
 #set serializer => 'XML';
 set serializer => 'JSON'; #un-comment this for json format responses
  
