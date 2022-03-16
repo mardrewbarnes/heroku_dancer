@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 use Dancer;
-use JSON;
+use JSON::XS;
 #set serializer => 'XML';
 set serializer => 'JSON'; #un-comment this for json format responses
  
