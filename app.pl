@@ -2,7 +2,7 @@
 use Dancer;
 
 get '/' => sub {
-    "Hello World!"
+    "Hello Worlds!"
 };
 
 dance;
