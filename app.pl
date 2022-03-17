@@ -12,7 +12,7 @@ use HTTP::Request;
 use lib '.';
 use BOM_Processor;
 
-use constant BOM_URL => 'http://www.bom.gov.au/fwo/IDN60801/IDN60801.95765.json';
+use constant BOM_URL => 'http://www.bom.sgov.au/fwo/IDN60801/IDN60801.95765.json';
 
 get '/' => sub{
 	return process_request();
@@ -74,6 +74,8 @@ sub process_request
 	);
 	
 	if ($response->code() ne '200') {
+		status 503;
+		
 		return {error => $response->code().' '.$response->message()};
 	}
 	
